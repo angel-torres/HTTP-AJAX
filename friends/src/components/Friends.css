@@ -7,10 +7,9 @@
     background-color:white;
 }
 
-.friend-card {
-    border: 2px lightgrey solid;
-    width: 25%;
+.list-group-item {
     color: darkcyan;
+    width: 50%;
 }
 
 .form-wrapper {
@@ -23,4 +22,21 @@
     width: 33%;
     font-size: 20px;
     border-radius: 10px;
+}
+
+.card {
+    display: flex;
+}
+
+.list-group {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    color: darkcyan;
+    margin: 40px;
+    border-bottom: 1px darkcyan solid;
 }
