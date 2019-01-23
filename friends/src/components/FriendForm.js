@@ -12,8 +12,7 @@ export default class FriendForm extends Component {
             <input className="form-control form-control-lg" type="email" placeholder="email"/>
             </div>
             <div>
-                <button className="btn btn-success">Add Friend</button>
-                <button className="btn btn-info">Update Friend</button>
+                <button className="btn btn-primary">Add Friend</button>
                 <button className="btn btn-danger">Delete Friend</button>
             </div>
         </form>
