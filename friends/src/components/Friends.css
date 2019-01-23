@@ -1,0 +1,26 @@
+.friend-wrapper {
+    border: 2px lightgrey solid;
+    display: flex;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background-color:white;
+}
+
+.friend-card {
+    border: 2px lightgrey solid;
+    width: 25%;
+    color: darkcyan;
+}
+
+.form-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.input {
+    height: 50px;
+    width: 33%;
+    font-size: 20px;
+    border-radius: 10px;
+}

@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-router-dom
 
 PATH: 
   C:\Users\Angel\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Angel\bin;C:\Program Files\Microsoft MPI\Bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared;C:\Program Files (x86)\Common Files\Roxio Shared\12.0\DLLShared;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\QuickTime\QTSystem;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\WINDOWS\System32\OpenSSH;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Users\Angel\AppData\Local\Microsoft\WindowsApps;C:\Users\Angel\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Angel\AppData\Roaming\npm;C:\Users\Angel\AppData\Local\Yarn\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\Angel\Documents\LambdaSchool\Projects\React-Projects\HTTP-AJAX\friends\node_modules\jest-util\node_modules\.bin'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Angel\Documents\LambdaSchool\Projects\React-Projects\HTTP-AJAX\friends\node_modules\optimize-css-assets-webpack-plugin\node_modules\.bin'
 
 npm manifest: 
   {
@@ -7950,7 +7950,7 @@ Lockfile:
       strip-ansi "4.0.0"
       text-table "0.2.0"
   
-  react-dom@16.7.0:
+  react-dom@^16.7.0:
     version "16.7.0"
     resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.7.0.tgz#a17b2a7ca89ee7390bc1ed5eb81783c7461748b8"
     integrity sha512-D0Ufv1ExCAmF38P2Uh1lwpminZFRXEINJe53zRAbm4KPwSyd6DY/uDoS0Blj9jvPpn1+wivKpZYc8aAAN/nAkg==
@@ -8020,7 +8020,7 @@ Lockfile:
     optionalDependencies:
       fsevents "1.2.4"
   
-  react@16.7.0:
+  react@^16.7.0:
     version "16.7.0"
     resolved "https://registry.yarnpkg.com/react/-/react-16.7.0.tgz#b674ec396b0a5715873b350446f7ea0802ab6381"
     integrity sha512-StCz3QY8lxTb5cl2HJxjwLFOXPIFQp+p+hxQfc8WE0QiLfCtIlKj8/+5tjjKm8uSTlAW+fCPaavGFS06V9Ar3A==
