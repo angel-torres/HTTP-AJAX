@@ -50,3 +50,7 @@
 .btn-group-vertical {
     width: 50%;
 }
+
+.friend-id {
+    display: none;
+}

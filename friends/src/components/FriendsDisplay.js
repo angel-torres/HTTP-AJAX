@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import './Friends.css';
 
 export default class FriendsDisplay extends Component {
@@ -14,11 +15,11 @@ export default class FriendsDisplay extends Component {
                     <h1>{friend.name}</h1>
                     <p>{friend.age}</p>
                     <p>{friend.email}</p>
+                    <p className="friend-id">{friend.id}</p>
                     <div class="btn-group-vertical">
-                        <button className="btn btn-secondary">Update Friend</button>
-                        <button type="submit" className="btn btn-danger">Delete Friend</button>
+                        <Link to={`/update/${friend.id}`} className="btn btn-info">Update Friend</Link>
+                        <button className="btn btn-danger">Delete Friend</button>
                     </div>
-                    
                 </form>
             ))}
         </div>
