@@ -8,10 +8,9 @@ export default class FriendUpdateForm extends Component {
     render() {
         const friendId = this.props.match.params.friendId;
         const friend = this.props.data.find( friend => friendId === `${friend.id}`)
-        console.log(this.props.data)
         return (
         <div className="form-wrapper">
-            <form onSubmit={this.props.updateFriend} className="form-wrapper">
+            <form onSubmit={e => this.props.updateFriend(e, friend.id)} className="form-wrapper">
                 <div>
                     <input id="name" className="form-control form-control-lg" type="text" placeholder={friend.name}/>
                     <input id="age" className="form-control form-control-lg" type="text" placeholder={friend.age}/>
