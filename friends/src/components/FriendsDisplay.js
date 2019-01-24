@@ -7,16 +7,19 @@ export default class FriendsDisplay extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
         <div className="list-group">
             {this.props.data.map( friend => (
-                <div className="list-group-item">
+                <form onSubmit={this.props.deleteFriend} className="list-group-item">
                     <h1>{friend.name}</h1>
-                    <p>Age: {friend.age}</p>
-                    <p>Email: {friend.email}</p>
-                    <button className="btn btn-info">Update Friend</button>
-                </div>
+                    <p>{friend.age}</p>
+                    <p>{friend.email}</p>
+                    <div class="btn-group-vertical">
+                        <button className="btn btn-secondary">Update Friend</button>
+                        <button type="submit" className="btn btn-danger">Delete Friend</button>
+                    </div>
+                    
+                </form>
             ))}
         </div>
         )

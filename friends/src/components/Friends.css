@@ -8,7 +8,7 @@
 }
 
 .list-group-item {
-    color: darkcyan;
+    color: grey;
     width: 50%;
 }
 
@@ -33,12 +33,20 @@
 }
 
 .header {
-    color: darkcyan;
+    color: grey;
     margin: 40px;
-    border-bottom: 1px darkcyan solid;
+    border-bottom: 1px lightgrey solid;
 }
 
 .btn {
-    width: 33%;
+    width: 50%;
     margin: 20px 0;
+}
+
+.btn-primary {
+    width: 100%;
+}
+
+.btn-group-vertical {
+    width: 50%;
 }
