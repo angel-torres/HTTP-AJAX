@@ -109,7 +109,7 @@ class App extends Component {
 
         <Route path="/home/friends" render={ props => <FriendsDisplay {...props} setUpdate={this.setUpdate}  deleteFriend={this.deleteFriend} data={this.state.data} newFriend={this.state.newFriend}/>}/>
 
-        <Route exact path='/update/:friendId' render={props => <FriendUpdateForm {...props} setUpdate={this.setUpdate} updateFriend={this.updateFriend} data={this.state.data} newFriend={this.state.newFriend} handleChanges={this.handleChanges}/>} />
+        <Route path='/update/:friendId' render={props => <FriendUpdateForm {...props} setUpdate={this.setUpdate} updateFriend={this.updateFriend} data={this.state.data} newFriend={this.state.newFriend} handleChanges={this.handleChanges}/>}/>
       </div>
     );
   }
