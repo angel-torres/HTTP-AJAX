@@ -10,7 +10,7 @@ export default class FriendsDisplay extends Component {
         return (
         <div className="list-group">
             {this.props.data.map( friend => (
-               <FriendCard friend={friend} newFriend={this.props.newFriend} deleteFriend={this.props.deleteFriend} />
+               <FriendCard setUpdate={this.props.setUpdate} friend={friend} newFriend={this.props.newFriend} deleteFriend={this.props.deleteFriend} />
             ))}
         </div>
         )

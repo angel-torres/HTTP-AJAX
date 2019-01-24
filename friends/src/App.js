@@ -40,9 +40,19 @@ class App extends Component {
     )
   }
 
+  setUpdate = (e, friendId) => {
+    e.preventDefault();
+    this.props.history.push(`/update/${friendId}`)
+    this.setState({
+      newFriend: this.state.data.find( friend => friendId === friend.id)
+    })
+  }
+
   addFriend = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/friends', {...this.state.newFriend})
+    axios.post('http://localhost:5000/friends', {...this.state.newFriend,
+      id: Date.now(),
+  })
     .then( res => {
       this.setState({
         data: res.data,
@@ -72,31 +82,22 @@ class App extends Component {
     });
   }
 
-  updateFriend = (e) => {
+  updateFriend = (e, friendId) => {
     e.preventDefault();
-    axios.delete(`http://localhost:5000/friends/${e.target.children[2].innerText}`,)
-    .then( res => {
+    axios.put(`http://localhost:5000/friends/${friendId}`, this.state.newFriend)
+    .then(res => {
       this.setState({
-        data: res.data
+        data: res.data,
+        newFriend: {
+          id: '',
+          name: '',
+          age: '',
+          email: '',
+        }
       });
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-    console.log(e.target);
-    axios.post('http://localhost:5000/friends', {
-      id: (e.target.children[2].innerText),
-      name: (e.target.children[0].children[0].value),
-      age: (e.target.children[0].children[1].value),
-      email: (e.target.children[0].children[2].value),})
-    .then( res => {
-      this.setState({
-        data: res.data
-      });
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+      this.props.history.push("/home/friends"); 
+     })
+     .catch(err => console.log(err))
   }
 
   render() {
@@ -106,9 +107,9 @@ class App extends Component {
         {/* <FriendForm addFriend={this.addFriend} handleChanges={this.handleChanges} /> */}
         <Route path="/home" render={ props => <FriendForm {...props} data={this.state.data} newFriend={this.state.newFriend} addFriend={this.addFriend} handleChanges={this.handleChanges} />}/>
 
-        <Route path="/home/friends" render={ props => <FriendsDisplay {...props} deleteFriend={this.deleteFriend} data={this.state.data} newFriend={this.state.newFriend}/>}/>
+        <Route path="/home/friends" render={ props => <FriendsDisplay {...props} setUpdate={this.setUpdate}  deleteFriend={this.deleteFriend} data={this.state.data} newFriend={this.state.newFriend}/>}/>
 
-        <Route exact path='/update/:friendId' render={props => <FriendUpdateForm {...props} updateFriend={this.updateFriend} data={this.state.data}/>} />
+        <Route exact path='/update/:friendId' render={props => <FriendUpdateForm {...props} setUpdate={this.setUpdate} updateFriend={this.updateFriend} data={this.state.data} newFriend={this.state.newFriend} handleChanges={this.handleChanges}/>} />
       </div>
     );
   }

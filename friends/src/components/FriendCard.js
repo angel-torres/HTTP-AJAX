@@ -17,7 +17,7 @@ export default class FriendCard extends Component {
             <p>{this.props.friend.email}</p>
             <p className="friend-id">{this.props.friend.id}</p>
             <div class="btn-group-vertical">
-                <Link to={`/update/${this.props.friend.id}`} className="btn btn-info">Update Friend</Link>
+                <button onClick={e => this.props.setUpdate(e, this.props.friend.id)} className="btn btn-info">Update Friend</button>
                 <button onClick={e => this.props.deleteFriend(e, this.props.friend.id)} className="btn btn-danger">Delete Friend</button>
             </div>
         </div>
