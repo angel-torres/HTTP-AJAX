@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import FriendForm from './FriendForm';
-import { Link } from 'react-router-dom';
 
 export default class FriendUpdateForm extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         const friendId = this.props.match.params.friendId;
         const friend = this.props.data.find( friend => `${friendId}` === `${friend.id}`);

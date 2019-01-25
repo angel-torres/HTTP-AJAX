@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 import './Friends.css'
 
 export default class FriendCard extends Component {
-    constructor(props) {
-        super(props);
-    }
-
   render() {
     return (
         <div className="list-group-item">
@@ -16,7 +10,7 @@ export default class FriendCard extends Component {
             <p>{this.props.friend.age}</p>
             <p>{this.props.friend.email}</p>
             <p className="friend-id">{this.props.friend.id}</p>
-            <div class="btn-group-vertical">
+            <div className="btn-group-vertical">
                 <button onClick={e => this.props.setUpdate(e, this.props.friend.id)} className="btn btn-info">Update Friend</button>
                 <button onClick={e => this.props.deleteFriend(e, this.props.friend.id)} className="btn btn-danger">Delete Friend</button>
             </div>

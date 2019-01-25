@@ -3,9 +3,6 @@ import FriendCard from './FriendCard'
 import './Friends.css';
 
 export default class FriendsDisplay extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
         <div className="list-group">

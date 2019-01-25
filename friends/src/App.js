@@ -17,7 +17,7 @@ class App extends Component {
       newFriend: {
         id: '',
         name: '',
-        age: null,
+        age: '',
         email: '',
       },
     }
