@@ -1,0 +1,56 @@
+.friend-wrapper {
+    border: 2px lightgrey solid;
+    display: flex;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background-color:white;
+}
+
+.list-group-item {
+    color: grey;
+    width: 50%;
+}
+
+.form-wrapper {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.form-control {
+    margin-top: 20px;
+}
+
+.card {
+    display: flex;
+}
+
+.list-group {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    color: grey;
+    margin: 40px;
+    border-bottom: 1px lightgrey solid;
+}
+
+.btn {
+    width: 50%;
+    margin: 20px 0;
+}
+
+.btn-primary {
+    width: 100%;
+}
+
+.btn-group-vertical {
+    width: 50%;
+}
+
+.friend-id {
+    display: none;
+}
